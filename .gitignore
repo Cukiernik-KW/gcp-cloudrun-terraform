@@ -16,7 +16,8 @@ crash.*.log
 *.tfvars.json
 !*.tfvars.example
 
-# Saved plan files
+# Saved plan files - contain full attribute values, may contain secrets
+tfplan
 *.tfplan
 
 # CLI config overrides

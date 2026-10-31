@@ -7,7 +7,7 @@ Infrastructure as Code for Cloud Run on Google Cloud, built with Terraform.
 
 ## Roadmap
 
-- [ ] Bootstrap: GCS bucket for remote Terraform state (versioning, locked down)
+- [x] Bootstrap: GCS bucket for remote Terraform state (versioning, locked down)
 - [ ] Root config: `gcs` backend, pinned provider, variables, outputs
 - [ ] Enable required APIs (`google_project_service`)
 - [ ] Dedicated least-privilege runtime service account
