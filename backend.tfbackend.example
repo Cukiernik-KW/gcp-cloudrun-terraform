@@ -1,0 +1,5 @@
+# Partial backend configuration for the "gcs" backend.
+# Copy to backend.tfbackend, set your bucket (output of bootstrap/), then:
+#   terraform init -backend-config=backend.tfbackend
+
+bucket = "your-gcp-project-id-tfstate"

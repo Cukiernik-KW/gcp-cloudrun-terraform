@@ -8,7 +8,7 @@ Infrastructure as Code for Cloud Run on Google Cloud, built with Terraform.
 ## Roadmap
 
 - [x] Bootstrap: GCS bucket for remote Terraform state (versioning, locked down)
-- [ ] Root config: `gcs` backend, pinned provider, variables, outputs
+- [x] Root config: `gcs` backend, pinned provider, variables, outputs
 - [ ] Enable required APIs (`google_project_service`)
 - [ ] Dedicated least-privilege runtime service account
 - [ ] Cloud Run v2 service with public access modelled as a separate IAM binding
@@ -21,5 +21,8 @@ Infrastructure as Code for Cloud Run on Google Cloud, built with Terraform.
 ## Repository layout
 
 ```
-bootstrap/   # one-off config with LOCAL state that creates the remote state bucket
+bootstrap/                  # one-off config with LOCAL state that creates the remote state bucket
+*.tf                        # root module (state stored remotely in GCS)
+backend.tfbackend.example   # partial backend config (bucket name kept out of code)
+terraform.tfvars.example    # variable values template
 ```

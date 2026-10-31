@@ -1,0 +1,6 @@
+# Copy to terraform.tfvars and fill in your values:
+#   Copy-Item terraform.tfvars.example terraform.tfvars
+
+project_id  = "your-gcp-project-id"
+region      = "europe-central2"
+environment = "dev"

@@ -16,6 +16,9 @@ crash.*.log
 *.tfvars.json
 !*.tfvars.example
 
+# Real partial backend config - commit only *.tfbackend.example
+*.tfbackend
+
 # Saved plan files - contain full attribute values, may contain secrets
 tfplan
 *.tfplan
