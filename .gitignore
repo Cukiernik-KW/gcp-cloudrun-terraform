@@ -1,5 +1,7 @@
 # Terraform working directory (downloaded providers and modules)
 .terraform/
+.claude/
+
 
 # State files - never commit, they may contain secrets
 *.tfstate
