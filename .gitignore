@@ -1,0 +1,28 @@
+# Terraform working directory (downloaded providers and modules)
+.terraform/
+
+# State files - never commit, they may contain secrets
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Real variable values - commit only *.tfvars.example
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Saved plan files
+*.tfplan
+
+# CLI config overrides
+.terraformrc
+terraform.rc
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# NOTE: .terraform.lock.hcl IS committed (pins provider versions for the team)
