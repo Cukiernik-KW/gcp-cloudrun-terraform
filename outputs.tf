@@ -8,6 +8,11 @@ output "project_number" {
   value       = data.google_project.this.number
 }
 
+output "hello_runtime_sa_email" {
+  description = "Email of the runtime service account of the hello Cloud Run service."
+  value       = google_service_account.hello.email
+}
+
 output "environment" {
   description = "Environment name."
   value       = var.environment

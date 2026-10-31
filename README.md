@@ -10,7 +10,7 @@ Infrastructure as Code for Cloud Run on Google Cloud, built with Terraform.
 - [x] Bootstrap: GCS bucket for remote Terraform state (versioning, locked down)
 - [x] Root config: `gcs` backend, pinned provider, variables, outputs
 - [x] Enable required APIs (`google_project_service`)
-- [ ] Dedicated least-privilege runtime service account
+- [x] Dedicated least-privilege runtime service account
 - [ ] Cloud Run v2 service with public access modelled as a separate IAM binding
 - [ ] Reusable module `modules/cloud_run_service`, used for `api` and `bff`
 - [ ] Drift detection demo

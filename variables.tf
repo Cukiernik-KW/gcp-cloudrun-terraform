@@ -15,6 +15,12 @@ variable "region" {
   }
 }
 
+variable "runtime_roles" {
+  description = "Project-level IAM roles for the Cloud Run runtime service account. Empty by default: the sample app calls no Google APIs."
+  type        = list(string)
+  default     = []
+}
+
 variable "environment" {
   description = "Environment name, used in resource names and labels."
   type        = string
