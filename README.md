@@ -12,7 +12,7 @@ Infrastructure as Code for Cloud Run on Google Cloud, built with Terraform.
 - [x] Enable required APIs (`google_project_service`)
 - [x] Dedicated least-privilege runtime service account
 - [x] Cloud Run v2 service with public access modelled as a separate IAM binding
-- [ ] Reusable module `modules/cloud_run_service`, used for `api` and `bff`
+- [x] Reusable module `modules/cloud_run_service`, used for a public BFF (`hello`) and a private `api`
 - [ ] Drift detection demo
 - [ ] `terraform import` demo
 - [ ] CI/CD: GitHub Actions with Workload Identity Federation (no JSON keys)
@@ -23,6 +23,7 @@ Infrastructure as Code for Cloud Run on Google Cloud, built with Terraform.
 ```
 bootstrap/                  # one-off config with LOCAL state that creates the remote state bucket
 *.tf                        # root module (state stored remotely in GCS)
+modules/cloud_run_service/  # reusable module: runtime SA + Cloud Run v2 service + invoker IAM
 backend.tfbackend.example   # partial backend config (bucket name kept out of code)
 terraform.tfvars.example    # variable values template
 ```

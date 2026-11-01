@@ -18,6 +18,16 @@ output "hello_runtime_sa_email" {
   value       = module.hello.service_account_email
 }
 
+output "api_url" {
+  description = "URL of the private api service (requires an ID token of an allowed invoker)."
+  value       = module.api.uri
+}
+
+output "api_runtime_sa_email" {
+  description = "Email of the runtime service account of the api service."
+  value       = module.api.service_account_email
+}
+
 output "environment" {
   description = "Environment name."
   value       = var.environment
