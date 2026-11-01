@@ -13,7 +13,7 @@ Infrastructure as Code for Cloud Run on Google Cloud, built with Terraform.
 - [x] Dedicated least-privilege runtime service account
 - [x] Cloud Run v2 service with public access modelled as a separate IAM binding
 - [x] Reusable module `modules/cloud_run_service`, used for a public BFF (`hello`) and a private `api`
-- [ ] Drift detection demo
+- [x] Drift detection demo
 - [ ] `terraform import` demo
 - [ ] CI/CD: GitHub Actions with Workload Identity Federation (no JSON keys)
 - [ ] Cleanup: `terraform destroy`
