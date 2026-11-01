@@ -10,12 +10,12 @@ output "project_number" {
 
 output "hello_url" {
   description = "Public URL of the hello Cloud Run service."
-  value       = google_cloud_run_v2_service.hello.uri
+  value       = module.hello.uri
 }
 
 output "hello_runtime_sa_email" {
   description = "Email of the runtime service account of the hello Cloud Run service."
-  value       = google_service_account.hello.email
+  value       = module.hello.service_account_email
 }
 
 output "environment" {
