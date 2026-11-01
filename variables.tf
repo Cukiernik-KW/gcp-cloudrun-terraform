@@ -15,6 +15,12 @@ variable "region" {
   }
 }
 
+variable "hello_image" {
+  description = "Container image of the hello service. In real CI/CD, pass an immutable digest."
+  type        = string
+  default     = "us-docker.pkg.dev/cloudrun/container/hello"
+}
+
 variable "runtime_roles" {
   description = "Project-level IAM roles for the Cloud Run runtime service account. Empty by default: the sample app calls no Google APIs."
   type        = list(string)
